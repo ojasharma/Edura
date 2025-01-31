@@ -1,0 +1,299 @@
+.class-details-content{
+  margin-top:100px;
+  padding: 0px 30px;
+}
+
+.class-details-content h2{
+    font-family: PT Serif, sans-serif ;
+    font-size: 30px;
+}
+.video-title{
+  font-family: Roboto !important;
+  font-size: 14px !important;
+}
+
+/* Container for video cards */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center the content horizontally */
+  /* border: 1px solid #ddd; */
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: hidden;
+  /* box-shadow: -5px -5px 0px #c8c8c8, -10px -10px 0px #969696; */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  /* text-align: center; */
+  padding: 0px;
+  height: 185px; /* Adjust the height as needed */
+  position: relative; /* Required for absolute positioning of the button */
+  padding-bottom: 56.25%; 
+}
+
+.video-topics {
+  margin-top: 8px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topics-dropdown {
+  width: 100%; /* Adjust width to fit container */
+  padding: 8px; /* Add padding for better appearance */
+  font-size: 14px; /* Ensure consistent font size */
+  border: 1px solid #ccc; /* Add a border for better visibility */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #fff; /* Background color for dropdown */
+  color: #333; /* Text color */
+  cursor: pointer; /* Pointer cursor for interactive elements */
+}
+
+/* Hover effect for dropdown */
+.topics-dropdown:hover {
+  border-color: #888; /* Change border color on hover */
+}
+
+/* Dropdown for dark theme */
+[data-theme="dark"] .topics-dropdown {
+  background-color: #555; /* Dark background */
+  color: #fff; /* Light text */
+  border: 1px solid #777; /* Border for dark mode */
+}
+
+[data-theme="dark"] .topics-dropdown:hover {
+  border-color: #aaa; /* Hover effect for dark theme */
+}
+
+
+/* .video-card:hover {
+  transform: scale(1.05);
+  background-color: #dcd3e1;
+} */
+
+.video-card img {
+  width: 360px;
+  height: auto;
+  object-fit: cover; /* Ensures the whole image is visible */
+  position: absolute;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.deleteClass-button {
+  position: absolute; /* Position it absolutely inside the card */
+  bottom: 10px; /* 10px from the bottom */
+  right: 10px; /* 10px from the right */
+  padding: 8px 15px;
+  font-size: 0.8rem;
+  color: black !important;
+  background-color: rgb(187, 34, 34);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 70px;
+  height: auto;
+}
+
+.deleteClass-button:hover {
+  background-color: #a00;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-actions {
+  margin-top: 20px;
+}
+
+.confirm-button, .cancel-button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px; /* Reduced padding */
+  font-size: 14px; /* Smaller font size */
+  border-radius: 4px; /* Slightly smaller border-radius */
+  cursor: pointer;
+  margin-right: 8px; /* Adjust spacing between buttons */
+}
+
+.cancel-button {
+  background: #95a5a6;
+}
+
+.confirm-button:hover {
+  background: #c0392b;
+}
+
+.cancel-button:hover {
+  background: #7f8c8d;
+}
+
+/* Summary section styling */
+.video-summary h3 {
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.video-summary p {
+  margin: 0 0 15px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.classVideoContent {
+  display: flex;
+  margin-top: 8px;
+}
+
+.videos-section {
+  margin: 20px 0;
+}
+
+.topic-tag {
+  display: inline-block;
+  background: #e0e0e0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  margin: 2px;
+}
+
+.video-topics {
+  max-width: 175px;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.video-topics select {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 3px;
+}
+[data-theme="dark"] .video-card {
+  background: #555;
+}
+
+[data-theme="dark"] .video-title, [data-theme="dark"] .video-topics, [data-theme="dark"] .video-topics select, [data-theme="dark"] .videos-section h2, [data-theme="dark"] .class-details-content p{
+  color: #fff;
+}
+
+[data-theme="dark"] .video-content-right svg {
+  stroke: #fff;
+}
+
+[data-theme="dark"] .video-topics select {
+  background-color: rgba(85, 85, 85, 10);
+}
+.class-details-back svg {
+  cursor: pointer;
+}
+
+.video-content-left {
+  width: 310px;
+  width: 310px;
+}
+
+.video-card:hover {
+  filter: grayscale(100%) sepia(100%) hue-rotate(240deg) brightness(50%) saturate(3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    height: 95vh;
+    padding: 15px;
+  }
+  
+  .modal-content video {
+    max-height: 40vh;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .class-details-content {
+    margin-top: 200px;
+  }
+}
+
+/* Large screens (above 1440px) */
+@media screen and (min-width: 1441px) {
+  .video-card img{
+    width: 360px;
+    height: auto;
+  }
+}
+
+/* Desktop (1024px to 1440px) */
+@media screen and (max-width: 1440px) {
+  .video-card img{
+    width: 340px;
+    height: auto;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media screen and (max-width: 1023px) {
+  .video-card img{
+    width: 380px;
+    height: auto;
+  }
+}
+
+/* Large phones (481px to 767px) */
+@media screen and (max-width: 767px) {
+  .video-card img{
+    width: 450px;
+    height: auto;
+  }
+
+}
+
+/* Small phones (below 480px) */
+@media screen and (max-width: 480px) {
+  .video-card img{
+    width: 320px;
+    height: auto;
+  }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 320px) {
+  .video-card img{
+    width: 260px;
+    height: auto;
+  }
+}

@@ -1,0 +1,114 @@
+.header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.headerDark {
+    background-color: #000000;
+    color: white;
+}
+
+.logo {
+    padding-top: 10px;
+    flex: 1;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.logoImg {
+    height: 80px;
+    width: auto;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 40px;
+    gap: 20px;
+}
+
+.themeToggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.themeToggle:hover {
+    opacity: 0.8;
+}
+
+.profileIcon {
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit;
+}
+
+.plusContainer {
+    position: relative;
+}
+
+.plusIcon {
+    font-size: 24px;
+    cursor: pointer;
+    color: inherit;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: var(--bg-color, white);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    z-index: 9999;
+}
+
+.headerDark .dropdownMenu {
+    background-color: #2a2a2a;
+    border-color: #444;
+}
+
+.dropdownItem {
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    color: inherit;
+}
+
+.dropdownItem:hover {
+    background-color: var(--hover-bg, #f0f0f0);
+}
+
+.headerDark .dropdownItem:hover {
+    background-color: #333;
+}
+.backButton{
+    width: 30px;
+    background-color: transparent;
+    margin-right: 40px;
+    position: absolute;
+    top: 4px;
+    
+}
