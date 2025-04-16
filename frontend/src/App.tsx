@@ -3,7 +3,7 @@ import {
   RedirectToSignIn,
 } from "@clerk/clerk-react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "./pages/Homepage";
+import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
