@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  /* border: 1px solid red; */
+}
+
+label {
+  font-size:20px;
+}
+
+html,
+body{
+  /* background-color: black; */
+ 
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: block; /* Use default layout to avoid overriding child grids */
+  justify-content: unset;
+  align-items: unset;
+}
+
+.container{
+  padding: 32px 48px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container > h1{
+  margin-bottom: 20px;
+  color:#160c27;
+  font-family: PT Serif, sans-serif;
+  font-weight:600;
+}
+
+.container > form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container input{
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.container input::placeholder{
+  font-size: 12px;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+button{
+  background-color: #392759;
+  border: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+} 
+
+
+
+@media(max-width: 579px){
+  body{
+    align-items: center;
+  }
+}
+/* 
+.glowing-description {
+  color: #fff; 
+  text-shadow: 
+    0 0 1px rgba(255, 255, 255, 0.8),
+    0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.glowing-text {
+  color: #C8A2C8; 
+  text-shadow: 
+    0 0 1px rgba(255, 255, 255, 0.8),
+    0 0 2px rgba(255, 255, 255, 0.8);
+} */

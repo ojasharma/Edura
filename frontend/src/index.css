@@ -1,100 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
-  /* border: 1px solid red; */
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-label {
-  font-size:20px;
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
 }
-
-html,
-body{
-  /* background-color: black; */
- 
-  height: 100%;
-  width: 100%;
-  margin: 0;
+a:hover {
+  color: #535bf2;
 }
 
 body {
-  display: block; /* Use default layout to avoid overriding child grids */
-  justify-content: unset;
-  align-items: unset;
-}
-
-.container{
-  padding: 32px 48px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.container > h1{
-  margin-bottom: 20px;
-  color:#160c27;
-  font-family: PT Serif, sans-serif;
-  font-weight:600;
-}
-
-.container > form{
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-.container input{
-  width: 100%;
-  font-size: 20px;
-  padding: 10px;
-  outline: none;
-  border: 2px solid black;
-  border-radius: 10px;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-.container input::placeholder{
-  font-size: 12px;
-  font-style: italic;
-  font-family: sans-serif;
-}
-
-button{
-  background-color: #392759;
-  border: none;
-  font-size: 20px;
-  color: white;
-  border-radius: 3px;
-  padding: 10px;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
   cursor: pointer;
-  margin: 10px 0;
-} 
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
 
-
-
-@media(max-width: 579px){
-  body{
-    align-items: center;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
   }
 }
-/* 
-.glowing-description {
-  color: #fff; 
-  text-shadow: 
-    0 0 1px rgba(255, 255, 255, 0.8),
-    0 0 2px rgba(255, 255, 255, 0.8);
-}
-
-.glowing-text {
-  color: #C8A2C8; 
-  text-shadow: 
-    0 0 1px rgba(255, 255, 255, 0.8),
-    0 0 2px rgba(255, 255, 255, 0.8);
-} */
