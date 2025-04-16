@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "https://your-render-backend-url/api/$1"
-    }
-  ]
-}
