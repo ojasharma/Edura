@@ -21,9 +21,16 @@ router.post("/clerk-webhook", async (req, res) => {
       });
 
       await newUser.save();
+
+      console.log("✅ New user created from Clerk webhook:", {
+        name: newUser.name,
+        email: newUser.email,
+        number: newUser.number,
+      });
+
       return res.status(201).send("User saved from Clerk webhook.");
     } catch (error) {
-      console.error("Error saving user from webhook:", error);
+      console.error("❌ Error saving user from webhook:", error);
       return res.status(500).send("Error processing Clerk webhook.");
     }
   }
