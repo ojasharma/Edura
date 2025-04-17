@@ -1,26 +1,19 @@
 import { useUser, useClerk } from "@clerk/clerk-react";
-import { useEffect } from "react";
 
 const Dashboard = () => {
   const { user } = useUser();
   const { signOut } = useClerk();
 
-  useEffect(() => {
-    if (user?.primaryEmailAddress?.emailAddress) {
-      fetch("http://localhost:5000/api/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: user.fullName,
-          email: user.primaryEmailAddress.emailAddress,
-        }),
-      });
-    }
-  }, [user]);
-
   return (
     <div style={{ padding: "2rem" }}>
-      <h1>Welcome to your dashboard, {user?.fullName}!</h1>
+      <h1>Hi 👋</h1>
+      <p>
+        <strong>Name:</strong> {user?.fullName}
+      </p>
+      <p>
+        <strong>Email:</strong> {user?.primaryEmailAddress?.emailAddress}
+      </p>
+
       <button
         onClick={() => signOut({ redirectUrl: "/" })}
         style={{
